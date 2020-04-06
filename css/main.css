@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E8E8E8;
+}
+
+.container{
+    background:white;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    box-shadow: 20px 50px 30px;
+    transition: 1s linear;
+}
+
+.container:hover{
+    box-shadow: 20px 50px 3px;
+}
+
+
+input{
+    padding: 10px !important;
+}
+
+#form-heading{
+    text-transform: capitalize;
+}
+
+.hero-text{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 10px;
+    text-transform: uppercase;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: #5f2c82;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-attachment: fixed;
+}
+
+.hero-text > h1{
+    font-size: 10rem;
+}
+
+
+#info{
+    position: absolute;
+    right: 0px;
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    text-align: center;
+    background-color: #044B7F;
+    padding: 0px 20px;
+    color: white;
+}
+
+#info  #topic{
+    margin-bottom: 100px;
+}
+

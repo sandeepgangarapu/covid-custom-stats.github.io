@@ -7,14 +7,25 @@
         <meta name="author" content="" />
         <title>COVID-19 Custom Statistics</title>
         <!-- Font Awesome icons (free version)-->
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+
+
+
+
     </head>
-    <body id="page-top">
+    <body>
 
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
@@ -28,19 +39,380 @@
                 </div>
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0"> We send daily COVID-19 statistics directly to your email. Please add your email id and choose the regions and statistics you are interested in.
-                  We send one email a day. We use the data curated by Johns Hopkins Hospital.  (https://github.com/CSSEGISandData/COVID-19).
-                  <br><br>
-                  This is purely for the purpose of disseminating verified information. We will never share your data with anyone. </p>
+                  We send one email a day.
+                  <br> We use the data curated by Johns Hopkins Hospital.  (https://github.com/CSSEGISandData/COVID-19).
+                  <br> This is purely for the purpose of disseminating verified information. We will never share your data with anyone. </p>
             </div>
         </header>
-        <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio">
+        <script>
+          $(document).ready(function(){
+            //$('#region-select').selectpicker();
 
+          });
+        </script>
+        <style>
+          label{
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+          }
+        </style>
 
+        <section class="page-section portfolio" id="portfolio"">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Register here</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Form-->
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
 
-<div data-paperform-id="s9hikod4"></div><script>(function() {var script = document.createElement('script'); script.src = "https://paperform.co/__embed"; document.body.appendChild(script); })()</script>
+                          <div class="control-group">
+                              <div class="form-group  form-control-lg">
+                                  <label>Email Address</label>
+                                  <input class="form-control form-control-lg" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                                  <p class="help-block text-danger"></p>
+                              </div>
+                          </div>
 
+                          <div class="control-group" style="margin-top:5em;">
+                            <div class="form-group form-control-lg">
+                                <label>Select Country/State/Province</label>
+                                <small id="regionhelp" class="form-text text-muted">You can select multiple regions.</small>
+                                <select class="selectpicker form-control-lg" title="Choose Regions ...""  data-width="100%" multiple data-live-search="true">
+                                  <option selected>World</option>
+                                  <option>United Kingdom</option>
+                                  <option>US</option>
+                                  <option>India</option>
+                                  <option>Australia</option>
+                                  <option>Canada</option>
+                                  <option>China</option>
+                                  <option>Denmark</option>
+                                  <option>France</option>
+                                  <option>Netherlands</option>
+                                  <option>Afghanistan</option>
+                                  <option>Albania</option>
+                                  <option>Algeria</option>
+                                  <option>Andorra</option>
+                                  <option>Angola</option>
+                                  <option>Antigua and Barbuda</option>
+                                  <option>Argentina</option>
+                                  <option>Armenia</option>
+                                  <option>Australia_Australian Capital Territory</option>
+                                  <option>Australia_New South Wales</option>
+                                  <option>Australia_Northern Territory</option>
+                                  <option>Australia_Queensland</option>
+                                  <option>Australia_South Australia</option>
+                                  <option>Australia_Tasmania</option>
+                                  <option>Australia_Victoria</option>
+                                  <option>Australia_Western Australia</option>
+                                  <option>Austria</option>
+                                  <option>Azerbaijan</option>
+                                  <option>Bahamas</option>
+                                  <option>Bahrain</option>
+                                  <option>Bangladesh</option>
+                                  <option>Barbados</option>
+                                  <option>Belarus</option>
+                                  <option>Belgium</option>
+                                  <option>Belize</option>
+                                  <option>Benin</option>
+                                  <option>Bhutan</option>
+                                  <option>Bolivia</option>
+                                  <option>Bosnia and Herzegovina</option>
+                                  <option>Botswana</option>
+                                  <option>Brazil</option>
+                                  <option>Brunei</option>
+                                  <option>Bulgaria</option>
+                                  <option>Burkina Faso</option>
+                                  <option>Burma</option>
+                                  <option>Cabo Verde</option>
+                                  <option>Cambodia</option>
+                                  <option>Cameroon</option>
+                                  <option>Canada_Alberta</option>
+                                  <option>Canada_British Columbia</option>
+                                  <option>Canada_Diamond Princess</option>
+                                  <option>Canada_Grand Princess</option>
+                                  <option>Canada_Manitoba</option>
+                                  <option>Canada_New Brunswick</option>
+                                  <option>Canada_Newfoundland and Labrador</option>
+                                  <option>Canada_Northwest Territories</option>
+                                  <option>Canada_Nova Scotia</option>
+                                  <option>Canada_Ontario</option>
+                                  <option>Canada_Prince Edward Island</option>
+                                  <option>Canada_Quebec</option>
+                                  <option>Canada_Recovered</option>
+                                  <option>Canada_Saskatchewan</option>
+                                  <option>Canada_Yukon</option>
+                                  <option>Central African Republic</option>
+                                  <option>Chad</option>
+                                  <option>Chile</option>
+                                  <option>China_Beijing</option>
+                                  <option>China_Fujian</option>
+                                  <option>China_Guangdong</option>
+                                  <option>China_Hong Kong</option>
+                                  <option>China_Hubei</option>
+                                  <option>China_Jiangsu</option>
+                                  <option>China_Macau</option>
+                                  <option>China_Shandong</option>
+                                  <option>China_Shanghai</option>
+                                  <option>China_Tianjin</option>
+                                  <option>China_Zhejiang</option>
+                                  <option>Colombia</option>
+                                  <option>Congo (Brazzaville)</option>
+                                  <option>Congo (Kinshasa)</option>
+                                  <option>Costa Rica</option>
+                                  <option>Cote d'Ivoire</option>
+                                  <option>Croatia</option>
+                                  <option>Cuba</option>
+                                  <option>Cyprus</option>
+                                  <option>Czechia</option>
+                                  <option>Denmark_Faroe Islands</option>
+                                  <option>Denmark_Greenland</option>
+                                  <option>Denmark</option>
+                                  <option>Diamond Princess</option>
+                                  <option>Djibouti</option>
+                                  <option>Dominica</option>
+                                  <option>Dominican Republic</option>
+                                  <option>Ecuador</option>
+                                  <option>Egypt</option>
+                                  <option>El Salvador</option>
+                                  <option>Equatorial Guinea</option>
+                                  <option>Eritrea</option>
+                                  <option>Estonia</option>
+                                  <option>Eswatini</option>
+                                  <option>Ethiopia</option>
+                                  <option>Fiji</option>
+                                  <option>Finland</option>
+                                  <option>France_French Guiana</option>
+                                  <option>France_French Polynesia</option>
+                                  <option>France_Guadeloupe</option>
+                                  <option>France_Martinique</option>
+                                  <option>France_Mayotte</option>
+                                  <option>France</option>
+                                  <option>France_New Caledonia</option>
+                                  <option>France_Reunion</option>
+                                  <option>France_Saint Barthelemy</option>
+                                  <option>France_St Martin</option>
+                                  <option>Gabon</option>
+                                  <option>Gambia</option>
+                                  <option>Georgia</option>
+                                  <option>Germany</option>
+                                  <option>Ghana</option>
+                                  <option>Greece</option>
+                                  <option>Grenada</option>
+                                  <option>Guatemala</option>
+                                  <option>Guinea-Bissau</option>
+                                  <option>Guinea</option>
+                                  <option>Guyana</option>
+                                  <option>Haiti</option>
+                                  <option>Holy See</option>
+                                  <option>Honduras</option>
+                                  <option>Hungary</option>
+                                  <option>Iceland</option>
+                                  <option>Indonesia</option>
+                                  <option>Iran</option>
+                                  <option>Iraq</option>
+                                  <option>Ireland</option>
+                                  <option>Israel</option>
+                                  <option>Italy</option>
+                                  <option>Jamaica</option>
+                                  <option>Japan</option>
+                                  <option>Jordan</option>
+                                  <option>Kazakhstan</option>
+                                  <option>Kenya</option>
+                                  <option>Korea, South</option>
+                                  <option>Kosovo</option>
+                                  <option>Kuwait</option>
+                                  <option>Kyrgyzstan</option>
+                                  <option>Laos</option>
+                                  <option>Latvia</option>
+                                  <option>Lebanon</option>
+                                  <option>Liberia</option>
+                                  <option>Libya</option>
+                                  <option>Liechtenstein</option>
+                                  <option>Lithuania</option>
+                                  <option>Luxembourg</option>
+                                  <option>Madagascar</option>
+                                  <option>Malaysia</option>
+                                  <option>Maldives</option>
+                                  <option>Mali</option>
+                                  <option>Malta</option>
+                                  <option>Mauritania</option>
+                                  <option>Mauritius</option>
+                                  <option>Mexico</option>
+                                  <option>Moldova</option>
+                                  <option>Monaco</option>
+                                  <option>Mongolia</option>
+                                  <option>Montenegro</option>
+                                  <option>Morocco</option>
+                                  <option>Mozambique</option>
+                                  <option>MS Zaandam</option>
+                                  <option>Namibia</option>
+                                  <option>Nepal</option>
+                                  <option>Netherlands_Aruba</option>
+                                  <option>Netherlands_Curacao</option>
+                                  <option>Netherlands</option>
+                                  <option>Netherlands_Sint Maarten</option>
+                                  <option>New Zealand</option>
+                                  <option>Nicaragua</option>
+                                  <option>Niger</option>
+                                  <option>Nigeria</option>
+                                  <option>North Macedonia</option>
+                                  <option>Norway</option>
+                                  <option>Oman</option>
+                                  <option>Pakistan</option>
+                                  <option>Panama</option>
+                                  <option>Papua New Guinea</option>
+                                  <option>Paraguay</option>
+                                  <option>Peru</option>
+                                  <option>Philippines</option>
+                                  <option>Poland</option>
+                                  <option>Portugal</option>
+                                  <option>Qatar</option>
+                                  <option>Romania</option>
+                                  <option>Russia</option>
+                                  <option>Rwanda</option>
+                                  <option>Saint Kitts and Nevis</option>
+                                  <option>Saint Lucia</option>
+                                  <option>Saint Vincent and the Grenadines</option>
+                                  <option>San Marino</option>
+                                  <option>Saudi Arabia</option>
+                                  <option>Senegal</option>
+                                  <option>Serbia</option>
+                                  <option>Seychelles</option>
+                                  <option>Singapore</option>
+                                  <option>Slovakia</option>
+                                  <option>Slovenia</option>
+                                  <option>Somalia</option>
+                                  <option>South Africa</option>
+                                  <option>Spain</option>
+                                  <option>Sri Lanka</option>
+                                  <option>Sudan</option>
+                                  <option>Suriname</option>
+                                  <option>Sweden</option>
+                                  <option>Switzerland</option>
+                                  <option>Syria</option>
+                                  <option>Taiwan*</option>
+                                  <option>Tanzania</option>
+                                  <option>Thailand</option>
+                                  <option>Timor-Leste</option>
+                                  <option>Togo</option>
+                                  <option>Trinidad and Tobago</option>
+                                  <option>Tunisia</option>
+                                  <option>Turkey</option>
+                                  <option>Uganda</option>
+                                  <option>Ukraine</option>
+                                  <option>United Arab Emirates</option>
+                                  <option>United Kingdom_Anguilla</option>
+                                  <option>United Kingdom_Bermuda</option>
+                                  <option>United Kingdom_British Virgin Islands</option>
+                                  <option>United Kingdom_Cayman Islands</option>
+                                  <option>United Kingdom_Channel Islands</option>
+                                  <option>United Kingdom_Gibraltar</option>
+                                  <option>United Kingdom_Isle of Man</option>
+                                  <option>United Kingdom_Montserrat</option>
+                                  <option>United Kingdom_Turks and Caicos Islands</option>
+                                  <option>Uruguay</option>
+                                  <option>US_Alabama</option>
+                                  <option>US_Alaska</option>
+                                  <option>US_Arizona</option>
+                                  <option>US_Arkansas</option>
+                                  <option>US_California</option>
+                                  <option>US_Colorado</option>
+                                  <option>US_Connecticut</option>
+                                  <option>US_Delaware</option>
+                                  <option>US_Diamond Princess</option>
+                                  <option>US_District of Columbia</option>
+                                  <option>US_Florida</option>
+                                  <option>US_Georgia</option>
+                                  <option>US_Grand Princess</option>
+                                  <option>US_Guam</option>
+                                  <option>US_Hawaii</option>
+                                  <option>US_Idaho</option>
+                                  <option>US_Illinois</option>
+                                  <option>US_Indiana</option>
+                                  <option>US_Iowa</option>
+                                  <option>US_Kansas</option>
+                                  <option>US_Kentucky</option>
+                                  <option>US_Louisiana</option>
+                                  <option>US_Maine</option>
+                                  <option>US_Maryland</option>
+                                  <option>US_Massachusetts</option>
+                                  <option>US_Michigan</option>
+                                  <option>US_Minnesota</option>
+                                  <option>US_Mississippi</option>
+                                  <option>US_Missouri</option>
+                                  <option>US_Montana</option>
+                                  <option>US_Nebraska</option>
+                                  <option>US_Nevada</option>
+                                  <option>US_New Hampshire</option>
+                                  <option>US_New Jersey</option>
+                                  <option>US_New Mexico</option>
+                                  <option>US_New York</option>
+                                  <option>US_North Carolina</option>
+                                  <option>US_North Dakota</option>
+                                  <option>US_Northern Mariana Islands</option>
+                                  <option>US_Ohio</option>
+                                  <option>US_Oklahoma</option>
+                                  <option>US_Oregon</option>
+                                  <option>US_Pennsylvania</option>
+                                  <option>US_Puerto Rico</option>
+                                  <option>US_Recovered</option>
+                                  <option>US_Rhode Island</option>
+                                  <option>US_South Carolina</option>
+                                  <option>US_South Dakota</option>
+                                  <option>US_Tennessee</option>
+                                  <option>US_Texas</option>
+                                  <option>US_Utah</option>
+                                  <option>US_Vermont</option>
+                                  <option>US_Virgin Islands</option>
+                                  <option>US_Virginia</option>
+                                  <option>US_Washington</option>
+                                  <option>US_West Virginia</option>
+                                  <option>US_Wisconsin</option>
+                                  <option>US_Wyoming</option>
+                                  <option>Uzbekistan</option>
+                                  <option>Venezuela</option>
+                                  <option>Vietnam</option>
+                                  <option>West Bank and Gaza</option>
+                                  <option>Zambia</option>
+                                  <option>Zimbabwe</option>
+                                </select>
+                              </div>
+                          </div>
 
+                          <div class="control-group" style="margin-top:7em;">
+                            <div class="form-group form-control-lg">
+                                <label>Select Statistics</label>
+                                <small id="statshelp" class="form-text text-muted">You can select multiple Statistics.</small>
+                                <select class="selectpicker form-control-lg"  title="Choose Statistics ...""   data-width="100%" multiple data-live-search="true">
+                                  <option>Total Active</option>
+                                  <option>Total Deaths</option>
+                                  <option>Total Recovered</option>
+                                  <option>Total Confirmed</option>
+                                  <option>New Active</option>
+                                  <option>New Deaths</option>
+                                  <option>New Recovered</option>
+                                  <option>New Confirmed</option>
+                                  <option>Perc Increase Confirmed</option>
+                                  <option>Perc Increase Deaths</option>
+
+                                </select>
+                              </div>
+                          </div>
+
+                            <br />
+                            <div id="success"></div>
+                            <div class="form-group" style="margin-top:5em;"><button class="btn btn-primary btn-lg btn-block" id="sendMessageButton" type="submit" onclick="">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
@@ -55,193 +427,17 @@
             </div>
         </footer>
 
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-        <div class="scroll-to-top d-lg-none position-fixed">
-            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
-        </div>
-        <!-- Portfolio Modals--><!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="" /><!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="" /><!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="" /><!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="" /><!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="" /><!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="" /><!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
         <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
         <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
         <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
+        <!-- <script src="assets/mail/jqBootstrapValidation.js"></script> -->
+        <!-- <script src="assets/mail/contact_me.js"></script> -->
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <!-- <script src="js/scripts.js"></script> -->
     </body>
 </html>

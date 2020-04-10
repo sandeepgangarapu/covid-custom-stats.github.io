@@ -70,12 +70,12 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <form id="infoForm" name="sentMessage" novalidate="novalidate">
 
                           <div class="control-group">
                               <div class="form-group  form-control-lg">
                                   <label>Email Address</label>
-                                  <input class="form-control form-control-lg" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                                  <input class="form-control form-control-lg" id="email" type="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
                                   <p class="help-block text-danger"></p>
                               </div>
                           </div>
@@ -84,7 +84,7 @@
                             <div class="form-group form-control-lg">
                                 <label>Select Country/State/Province</label>
                                 <small id="regionhelp" class="form-text text-muted">You can select multiple regions.</small>
-                                <select class="selectpicker form-control-lg" title="Choose Regions ...""  data-width="100%" multiple data-live-search="true">
+                                <select class="selectpicker form-control-lg" title="Choose Regions ..." id="regions"  data-width="100%" multiple data-live-search="true">
                                   <option selected>World</option>
                                   <option>United Kingdom</option>
                                   <option>US</option>
@@ -166,7 +166,6 @@
                                   <option>Congo (Brazzaville)</option>
                                   <option>Congo (Kinshasa)</option>
                                   <option>Costa Rica</option>
-                                  <option>Cote d'Ivoire</option>
                                   <option>Croatia</option>
                                   <option>Cuba</option>
                                   <option>Cyprus</option>
@@ -390,7 +389,7 @@
                             <div class="form-group form-control-lg">
                                 <label>Select Statistics</label>
                                 <small id="statshelp" class="form-text text-muted">You can select multiple Statistics.</small>
-                                <select class="selectpicker form-control-lg"  title="Choose Statistics ...""   data-width="100%" multiple data-live-search="true">
+                                <select class="selectpicker form-control-lg"  title="Choose Statistics ..." id="statistics" data-width="100%" multiple data-live-search="true">
                                   <option>Total Active</option>
                                   <option>Total Deaths</option>
                                   <option>Total Recovered</option>
@@ -427,7 +426,7 @@
             </div>
         </footer>
 
-
+          <script src="./scripts/index.js"></script>
 
         <!-- Bootstrap core JS-->
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->

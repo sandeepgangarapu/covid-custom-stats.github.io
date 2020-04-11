@@ -15,7 +15,7 @@ $(document).ready(function () {
     //process the form
     $.ajax({
       type: "POST",
-      url: "https://us-central1-testapi-a873e.cloudfunctions.net/addUser",
+      url: "https://us-central1-custom-stats.cloudfunctions.net/addUser",
       data: formData,
       contentType: "application/JSON",
       encode: false,
@@ -26,16 +26,7 @@ $(document).ready(function () {
       error: function (XMLHttpRequest, textStatus, errorThrown) {
         console.log(XMLHttpRequest.responseText)
         let error = XMLHttpRequest.responseText
-        if (error.includes('duplicate')) {
-          $('#error').hide()
-          $('#success').hide()
-          $('#duplicate').show()
-        }
-        else {
-          $('#success').hide()
-          $('#duplicate').hide()
-          $('#error').show()
-        }
+
       }
     });
     // stop the form from submitting the normal way and refreshing the page

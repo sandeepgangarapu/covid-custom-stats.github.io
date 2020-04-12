@@ -8,8 +8,8 @@ $(document).ready(function () {
     // there are many ways to get this data using jQuery (you can use the class or id also)
     var formData = {
       'email': $('input[id=email]').val(),
-      'regions': $('select[id=regions]').val(),
-      'statistics': $('select[id=statistics]').val(),
+      'regions': $('select[id=regions]').text(),
+      'statistics': $('select[id=statistics]').text(),
     };
     console.log(formData)
     //process the form

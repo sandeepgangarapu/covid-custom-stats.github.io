@@ -30,7 +30,7 @@ $(document).ready(function () {
           // $('#error').hide()
           // $('#duplicate').hide()
           // $('#success').show()
-          $("#spinner").hide();
+        
           document.location.href = "./thank-you.html"
           console.log("Data Saved: " + JSON.stringify(msg));
         },

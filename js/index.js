@@ -3,7 +3,7 @@ $(document).ready(function () {
     //alert('JS working')
     // process the form
     //getloc()
-
+  $("#spinner").hide();
     $('#infoForm').submit(function (event) {
       // get the form data
       // there are many ways to get this data using jQuery (you can use the class or id also)
@@ -16,6 +16,9 @@ $(document).ready(function () {
       };
       console.log(formData)
       //process the form
+
+      $("#spinner").show();
+
       $.ajax({
         type: "POST",
         url: "https://us-central1-custom-stats.cloudfunctions.net/addUser",
@@ -27,6 +30,7 @@ $(document).ready(function () {
           // $('#error').hide()
           // $('#duplicate').hide()
           // $('#success').show()
+          $("#spinner").hide();
           document.location.href = "./thank-you.html"
           console.log("Data Saved: " + JSON.stringify(msg));
         },

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>COVID-19 Custom Statistics</title>
@@ -10,16 +10,17 @@
 
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
         <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+
 
 
 
@@ -38,10 +39,9 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0"> We send daily COVID-19 statistics directly to your email. Please add your email id and choose the regions and statistics you are interested in.
-                  We send one email a day.
-                  <br> We use the data curated by Johns Hopkins Hospital.  (https://github.com/CSSEGISandData/COVID-19).
-                  <br> This is purely for the purpose of disseminating verified information. We will never share your data with anyone. </p>
+                <p class="masthead-subheading font-weight-light mb-0"> We send daily COVID-19 statistics directly to your email. Please add your email id and choose the regions and statistics you are interested in. We send one email a day.</p>
+                  <p class="masthead-subheading font-weight-light mb-0">   <br> We use the data curated by <a href="https://coronavirus.jhu.edu/map.html" style="color: rgb(255,255,255)"><u>Johns Hopkins Hospital</u></a>. <a href="https://github.com/CSSEGISandData/COVID-19" style="color: rgb(255,255,255)"><u>(https://github.com/CSSEGISandData/COVID-19l)</u></a></p>
+                    <p class="masthead-subheading font-weight-light mb-0"> <br> This is purely for the purpose of disseminating verified information. We will never share your data with anyone. Ever! </p>
             </div>
         </header>
         <script>
@@ -70,12 +70,13 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form id="infoForm" name="sentMessage" novalidate="novalidate">
+                        <form id="infoForm" name="sentMessage" class="needs-validation" method="POST" novalidate="novalidate">
 
                           <div class="control-group">
                               <div class="form-group  form-control-lg">
                                   <label>Email Address</label>
-                                  <input class="form-control form-control-lg"  id="email" type="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required="required" placeholder="Email Address"  data-validation-required-message="Please enter your email address." />
+                                  <input class="form-control form-control-lg"  id="email" type="email"  name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" required placeholder="Email Address"  data-validation-required-message="Please enter your email address." />
+                                  <div class="valid-feedback">Valid.</div>
                                   <p class="help-block text-danger"></p>
                               </div>
                           </div>
@@ -390,7 +391,8 @@
                             <div class="form-group form-control-lg">
                                 <label>Select Statistics</label>
                                 <small id="statshelp" class="form-text text-muted">You can select multiple Statistics.</small>
-                                <select class="selectpicker form-control-lg"  title="Choose Statistics ..." id="statistics" data-width="100%" multiple data-live-search="true">
+                                <select class="selectpicker form-control-lg"  title="Choose Statistics ..." id="statistics" data-width="100%" multiple data-live-search="true" required>
+                                  <option value="All Stats">All Stats</option>
                                   <option value="Total Confirmed">Total Confirmed</option>
                                   <option value="New Confirmed">New Confirmed</option>
                                   <option value="Total Deaths">Total Deaths</option>
@@ -418,24 +420,35 @@
 
         <!-- Footer-->
         <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-
-                </div>
-            </div>
+          <div class="container-sm">
+                  <!-- Footer Location-->
+                  <div>
+                      <p> <a href="privacy-policy.html" style="color: rgb(255,255,255)"><u>Privacy Policy</u></a></p>
+                  </div>
+                  <!-- Footer Social Icons-->
+              </div>
         </footer>
 
-          <script src="./scripts/index.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162266112-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-162266112-2');
+        </script>
 
         <!-- Bootstrap core JS-->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
         <!-- Third party plugin JS-->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>  -->
         <!-- Contact form JS-->
-        <!-- <script src="assets/mail/jqBootstrapValidation.js"></script> -->
-        <!-- <script src="assets/mail/contact_me.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+         <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <!-- <script src="js/scripts.js"></script> -->
         <script src="js/index.js"></script>

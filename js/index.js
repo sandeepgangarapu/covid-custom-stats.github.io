@@ -30,8 +30,8 @@ $(document).ready(function () {
           // $('#error').hide()
           // $('#duplicate').hide()
           // $('#success').show()
-        
-          document.location.href = "./thank-you.html"
+
+          document.location.href = "thank-you.html"
           console.log("Data Saved: " + JSON.stringify(msg));
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {

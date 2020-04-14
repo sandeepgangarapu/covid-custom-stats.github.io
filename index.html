@@ -70,12 +70,12 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form id="infoForm" name="sentMessage" class="needs-validation" method="POST" novalidate="novalidate">
+                        <form id="infoForm" name="sentMessage" class="needs-validation" method="POST">
 
                           <div class="control-group">
                               <div class="form-group  form-control-lg">
                                   <label>Email Address</label>
-                                  <input class="form-control form-control-lg"  id="email" type="email"  name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" required placeholder="Email Address"  data-validation-required-message="Please enter your email address." />
+                                  <input class="form-control form-control-lg" type =  "text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$"  placeholder="Email Address"  data-validation-required-message="Please enter your email address." required>
                                   <div class="valid-feedback">Valid.</div>
                                   <p class="help-block text-danger"></p>
                               </div>
@@ -437,6 +437,27 @@
           gtag('js', new Date());
 
           gtag('config', 'UA-162266112-2');
+        </script>
+
+        <script>
+          function validateEmail()
+          {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var inputText = document.getElementById("email").value;
+            if(inputText.value.match(mailformat))
+            {
+              inputText.focus();
+              return true;
+            }
+            else
+            {
+              alert("You have entered an invalid email address!");
+              inputText.focus();
+              return false;
+            }
+            
+
+          }
         </script>
 
         <!-- Bootstrap core JS-->

@@ -31,7 +31,7 @@ $(document).ready(function () {
           // $('#duplicate').hide()
           // $('#success').show()
           $("#spinner").hide();
-          document.location.href = "./thank-you.html"
+        //  document.location.href = "./thank-you.html"
           console.log("Data Saved: " + JSON.stringify(msg));
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
